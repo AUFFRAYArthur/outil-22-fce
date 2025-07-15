@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-slate-50 text-slate-800;
+}
+
+@media print {
+  body {
+    background-color: white;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+
+  main {
+    padding: 0 !important;
+  }
+
+  .printable-card {
+    box-shadow: none !important;
+    border: 1px solid #e5e7eb;
+  }
+
+  textarea {
+    border: none !important;
+    resize: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+  }
+
+  table {
+    page-break-inside: auto;
+  }
+  tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+  thead {
+    display: table-header-group;
+  }
+  tbody {
+    display: table-row-group;
+  }
+}
